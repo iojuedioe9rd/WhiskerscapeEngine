@@ -1,0 +1,23 @@
+{
+  "name": "whiskerscapeengine",
+  "version": "1.0.0",
+  "description": "An typescript game engine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iojuedioe9rd/WhiskerscapeEngine.git"
+  },
+  "keywords": [
+    "typescript",
+    "game-engine"
+  ],
+  "author": "Cats Studio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iojuedioe9rd/WhiskerscapeEngine/issues"
+  },
+  "homepage": "https://github.com/iojuedioe9rd/WhiskerscapeEngine#readme"
+}

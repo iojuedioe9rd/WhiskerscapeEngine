@@ -1,8 +1,7 @@
-namespace TSE
-{
-    export interface IComponentBuilder {
-        readonly type: string
+﻿namespace TSE {
+  export interface IComponentBuilder {
+    readonly type: string;
 
-        buildFromJSON(json: any): IComponent
-    }
+    buildFromJson(json: any): IComponent;
+  }
 }

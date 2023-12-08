@@ -1,5 +1,5 @@
 {
-    "watch": [ "src","assets" ],
-    "ext": "ts",
-    "exec": "npm run dev:run"
-  }
+  "watch": ["src", "assets"],
+  "ext": "ts,json",
+  "exec": "npm run dev:run"
+}

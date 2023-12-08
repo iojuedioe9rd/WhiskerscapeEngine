@@ -1,18 +1,13 @@
 ﻿namespace TSE {
+  export class BasicShader extends Shader {
+    public constructor() {
+      super("basic");
 
+      this.load(this.getVertexSource(), this.getFragmentSource());
+    }
 
-    export class BasicShader extends Shader {
-        
-        public constructor() {
-            super( "basic" );
-
-            this.load( this.getVertexSource(), this.getFragmentSource() );
-        }
-
-
-        private getVertexSource(): string {
-
-            return `
+    private getVertexSource(): string {
+      return `
 attribute vec3 a_position;
 attribute vec2 a_texCoord;
 
@@ -25,10 +20,10 @@ void main() {
     gl_Position = u_projection * u_model * vec4(a_position, 1.0);
     v_texCoord = a_texCoord;
 }`;
-        }
+    }
 
-        private getFragmentSource(): string {
-            return `
+    private getFragmentSource(): string {
+      return `
 precision mediump float;
 
 uniform vec4 u_tint;
@@ -40,6 +35,6 @@ void main() {
     gl_FragColor = u_tint * texture2D(u_diffuse, v_texCoord);
 }
 `;
-        }
     }
+  }
 }

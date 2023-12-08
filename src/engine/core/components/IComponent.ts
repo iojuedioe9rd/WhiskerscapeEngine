@@ -1,14 +1,14 @@
-namespace TSE
-{
-    export interface IComponent
-    {
-        name: string
-        readonly owner: SimObject
+﻿namespace TSE {
+  export interface IComponent {
+    name: string;
 
-        render(shader: Shader): void;
-        update(time: number): void;
-        load(): void;
-        setOwner( owner: SimObject): void;
-        
-    }
+    readonly owner: SimObject;
+    setOwner(owner: SimObject): void;
+
+    load(): void;
+
+    update(time: number): void;
+
+    render(shader: Shader): void;
+  }
 }

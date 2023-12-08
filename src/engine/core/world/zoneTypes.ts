@@ -13,7 +13,7 @@ namespace TSE {
   export type ZoneBehavior = {
     name: string;
     type: string;
-  }
+  };
 
   export type ZoneObject = {
     name: string;

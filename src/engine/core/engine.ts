@@ -29,14 +29,14 @@
       MaterialManager.registerMaterial(
         new Material(
           "crate",
-          "assets/textures/crate.jpg",
+          "assets/textures/crate.tga",
           new Color(0, 128, 255, 255),
         ),
       );
 
       // Load
       this._projection = Matrix4x4.orthographic(
-        0,
+        0, 
         this._canvas.width,
         this._canvas.height,
         0,

@@ -1,18 +1,28 @@
 {
     "compilerOptions": {
-        "module": "amd",
-        "noImplicitAny": true,
+        "module": "AMD",
+        "noImplicitReturns": false,
+
+   "strictNullChecks":false,
         "removeComments": true,
         "preserveConstEnums": true,
-        "outFile": "main.js",
+        "outFile": "./dist/app.js",
         "sourceMap": true,
-        "target": "es5"
+        "target": "es2022",
+        "moduleResolution":"Node",
+        "esModuleInterop": true,
+        "declaration": true,
+        "declarationMap": true,
+        "strict": false
     },
     "include": [
         "**/*"
     ],
     "exclude": [
-        "node_modules",
+        "./dist",
+        "./src/server",
+        "node_modules/**/*.*",
+        "./src/pathHTML.ts",
         "**/*.spec.ts"
     ]
 }

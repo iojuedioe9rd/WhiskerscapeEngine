@@ -20,6 +20,7 @@ namespace TSE {
     transform: ZoneTransform;
     children?: ZoneObject[];
     components?: ZoneComponent[];
+    behaviors?: ZoneBehavior[];
   };
 
   export type ZoneFile = {
@@ -28,6 +29,5 @@ namespace TSE {
     id: number;
 
     objects: ZoneObject[];
-    behaviors: ZoneBehavior[];
   };
 }

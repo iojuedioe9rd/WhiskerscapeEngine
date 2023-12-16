@@ -1,4 +1,4 @@
-namespace TSE {
+﻿namespace TSE {
   export interface IBehavior {
     name: string;
 

@@ -1,4 +1,4 @@
-namespace TSE {
+﻿namespace TSE {
   export abstract class BaseBehavior implements IBehavior {
     public name: string;
 
@@ -7,12 +7,15 @@ namespace TSE {
 
     public constructor(data: IBehaviorData) {
       this._data = data;
-      this.name = data.name;
+      this.name = this._data.name;
     }
+
     public setOwner(owner: SimObject): void {
       this._owner = owner;
     }
-    public apply(userData: any): void {}
+
     public update(time: number): void {}
+
+    public apply(userData: any): void {}
   }
 }

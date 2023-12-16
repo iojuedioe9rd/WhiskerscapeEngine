@@ -169,10 +169,9 @@ namespace TSE {
 
       switch (header.pixelDepth) {
         case 8:
-            var a = new Uint8ClampedArray(imageDataArray);
-            var b = new Uint8ClampedArray(palette);
+          var a = new Uint8ClampedArray(imageDataArray.buffer);
+          var b = new Uint8ClampedArray(palette.buffer);
           if (header.isGreyColor) {
-            
             TargaProcessor.getImageDataGrey8(
               imageData.data,
               a,
@@ -186,7 +185,6 @@ namespace TSE {
               xEnd,
             );
           } else {
-            
             TargaProcessor.getImageData8(
               imageData.data,
               a,
@@ -202,10 +200,9 @@ namespace TSE {
           }
           break;
         case 16:
-            var a = new Uint8ClampedArray(imageDataArray);
-            var b = new Uint8ClampedArray(palette);
+          var a = new Uint8ClampedArray(imageDataArray);
+          var b = new Uint8ClampedArray(palette);
           if (header.isGreyColor) {
-            
             TargaProcessor.getImageDataGrey16(
               imageData.data,
               a,
@@ -219,7 +216,6 @@ namespace TSE {
               xEnd,
             );
           } else {
-            
             TargaProcessor.getImageData16(
               imageData.data,
               a,

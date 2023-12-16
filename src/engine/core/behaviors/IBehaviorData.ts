@@ -1,7 +1,7 @@
-namespace TSE {
+﻿namespace TSE {
   export interface IBehaviorData {
     name: string;
 
-    setFromJSON(json: any): void;
+    setFromJson(json: any): void;
   }
 }

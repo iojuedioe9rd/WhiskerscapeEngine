@@ -61,7 +61,7 @@
 
     private static loadZone(asset: JsonAsset): void {
       console.log("Loading zone:" + asset.name);
-      let zoneData: ZoneFile = asset.data;
+      let zoneData = asset.data;
       let zoneId: number;
       if (zoneData.id === undefined) {
         throw new Error("Zone file format exception: Zone id not present.");

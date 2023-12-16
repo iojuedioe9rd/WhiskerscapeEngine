@@ -36,7 +36,7 @@
       return this._scene;
     }
 
-    public initialize(zoneData: ZoneFile): void {
+    public initialize(zoneData: any): void {
       if (zoneData.objects === undefined) {
         throw new Error("Zone initialization error: objects not present.");
       }
@@ -74,7 +74,7 @@
 
     public onDeactivated(): void {}
 
-    private loadSimObject(dataSection: ZoneObject, parent: SimObject): void {
+    private loadSimObject(dataSection: any, parent: SimObject): void {
       let name: string;
       if (dataSection.name !== undefined) {
         name = String(dataSection.name);
@@ -92,6 +92,14 @@
           let data = dataSection.components[c];
           let component = ComponentManager.extractComponent(data);
           simObject.addComponent(component);
+        }
+      }
+
+      if (dataSection.behaviors !== undefined) {
+        for (let b in dataSection.behaviors) {
+          let data = dataSection.behaviors[b];
+          let behavior = BehaviorManager.extractBehavior(data);
+          simObject.addBehavior(behavior);
         }
       }
 

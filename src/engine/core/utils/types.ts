@@ -3,9 +3,4 @@ namespace TSE {
     width: number;
     height: number;
   };
-
-  
-
-  
 }
- 

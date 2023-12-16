@@ -1,6 +1,4 @@
 ﻿namespace TSE {
-  
-
   export class MouseContext {
     public leftDown: boolean;
     public rightDown: boolean;

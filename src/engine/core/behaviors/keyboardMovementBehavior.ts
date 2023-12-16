@@ -33,7 +33,6 @@ namespace TSE {
 
   export class KeyboardMovementBehavior extends BaseBehavior {
     public speed: number = 0.1;
-    
 
     public constructor(data: KeyboardMovementBehaviorData) {
       super(data);
@@ -42,16 +41,28 @@ namespace TSE {
     }
 
     public update(time: number): void {
-      if (InputManager.isKeyDown(KeyCode.LeftArrow ) || InputManager.isKeyDown(KeyCode.A)) {
+      if (
+        InputManager.isKeyDown(KeyCode.LeftArrow) ||
+        InputManager.isKeyDown(KeyCode.A)
+      ) {
         this._owner.transform.position.x -= this.speed;
       }
-      if (InputManager.isKeyDown(KeyCode.RightArrow) || InputManager.isKeyDown(KeyCode.D)) {
+      if (
+        InputManager.isKeyDown(KeyCode.RightArrow) ||
+        InputManager.isKeyDown(KeyCode.D)
+      ) {
         this._owner.transform.position.x += this.speed;
       }
-  if (InputManager.isKeyDown(KeyCode.UpArrow) || InputManager.isKeyDown(KeyCode.W)) {
+      if (
+        InputManager.isKeyDown(KeyCode.UpArrow) ||
+        InputManager.isKeyDown(KeyCode.W)
+      ) {
         this._owner.transform.position.y -= this.speed;
       }
-      if (InputManager.isKeyDown(KeyCode.DownArrow) || InputManager.isKeyDown(KeyCode.S)) {
+      if (
+        InputManager.isKeyDown(KeyCode.DownArrow) ||
+        InputManager.isKeyDown(KeyCode.S)
+      ) {
         this._owner.transform.position.y += this.speed;
       }
 
